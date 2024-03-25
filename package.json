@@ -1,0 +1,91 @@
+{
+  "name": "print-slasher",
+  "displayName": "Print Slasher",
+  "description": "Comment out print statements!",
+  "icon": "./logo.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "print-slasher.bruh",
+        "title": "bruh"
+      }, 
+      {
+        "command": "print-slasher.commentOut",
+        "title": "Comment Out Prints"
+      }, 
+      {
+        "command": "print-slasher.commentIn",
+        "title": "Uncomment Prints"
+      }, 
+      {
+        "command": "print-slasher.insertDirectives",
+        "title": "Insert Directives"
+      }, 
+      {
+        "command": "print-slasher.removeDirectives",
+        "title": "Remove Directives"
+      }, 
+      {
+        "command": "print-slasher.removeDirectivesAndContents",
+        "title": "Remove Directives and Statements Between"
+      }, 
+      {
+        "command": "print-slasher.removePrints",
+        "title": "Remove Prints"
+      }
+    ],
+    "configuration": {
+      "title": "Print Slasher",
+      "properties": {
+        "printSlasher.keywords": {
+          "type": "string",
+          "default": "",
+          "description": "List of additional keywords for print statements to target. Formatting: comma deliminated list"
+        },
+        "printSlasher.directiveStart": {
+          "type": "string",
+          "default": "#ifdef DEBUG_PRINT",
+          "description": "Directive start string to be inserted before target statement. Intended for use in languages that support compiler directives (e.g. C, C++)."
+        },
+        "printSlasher.directiveEnd": {
+          "type": "string",
+          "default": "#endif",
+          "description": "Directive end string to be inserted before target statement. Intended for use in languages that support compiler directives (e.g. C, C++)."
+        },
+        "printSlasher.automaticLanguageDetection": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically include language-specific keywords based on the file's language."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  }
+}
