@@ -1,4 +1,4 @@
-# print-slasher README
+# Print Slasher
 
 
 ## Features
@@ -24,7 +24,9 @@ Each command will target your current text selection, or if nothing is selected,
 
 ## Known Issues
 
-If you call "Remove Directives" and there just so happens to be a starting or ending directive that matches the one specified in settings, the command will remove it even if the extension didn't originally put it there. In general, this extension does not distinguish between directives and comments it placed versus directives and pre-existing comments and directives on/around print statements.
+1. The extension's development was subject to my ability to code. Although not a specific issue, this is generally a recipe for disaster.
+
+2. If you call "Remove Directives" and there just so happens to be a starting or ending directive that matches the one specified in settings, the command will remove it even if the extension didn't originally put it there. In general, this extension does not distinguish between directives and comments it placed versus directives and pre-existing comments and directives on/around print statements.
 
 ## Release Notes
 ### 1.0.0

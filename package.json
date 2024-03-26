@@ -2,8 +2,13 @@
   "name": "print-slasher",
   "displayName": "Print Slasher",
   "description": "Comment out print statements!",
+  "publisher": "YanniZhuang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuangy47/Print-Slasher-Extension.git"
+  },
   "icon": "./logo.png",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.87.0"
   },
