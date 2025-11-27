@@ -28,6 +28,10 @@ Each command will target your current text selection, or if nothing is selected,
 
 2. If you call "Remove Directives" and there just so happens to be a starting or ending directive that matches the one specified in settings, the command will remove it even if the extension didn't originally put it there. In general, this extension does not distinguish between directives and comments it placed versus directives and pre-existing comments and directives on/around print statements.
 
+## Bug Report
+
+If you find a bug and wish to fix it, feel free to make a pull request. Alternatively, you can email me at the email listed in my GitHub profile. I make no guarantees on the speed at I can address the issue, but I'll try my best :)
+
 ## Release Notes
 ### 1.0.0
 Initial release.
